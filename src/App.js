@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import utd from "./img/utd.png";
+import foto from "./img/foto.jpeg";
+
+import BarraSuperior from "./components/BarraSuperior";
+import Carrusel from "./pages/Carrusel";
+import Mapa from "./pages/Mapa";
+import Cv from "./pages/Cv";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <BarraSuperior/>
+          </Route>
+          <Route path="/mapa">
+            <Mapa/>
+          </Route>
+          <Route path="/carrusel">
+            <Carrusel/>
+          </Route>
+          <Route path="/CV">
+            <Cv/>
+          </Route>
+          <Route path="/foto">
+            <center>
+              <img src={foto} />
+            </center>
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
