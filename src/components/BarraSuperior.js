@@ -9,13 +9,12 @@ function BarraSuperior() {
     <>
       <Navbar bg="black" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} to="/">Practica Router</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/aguirre">Practica Router - Info</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="mapa" >Mapa</Nav.Link>
               <Nav.Link as={Link} to="carrusel" >Carrusel</Nav.Link>
-              <Nav.Link as={Link} to="logo" >Logo</Nav.Link>
               <Nav.Link as={Link} to="CV" >Curriculum</Nav.Link>
             </Nav>
           </Navbar.Collapse>

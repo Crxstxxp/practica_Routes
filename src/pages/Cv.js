@@ -6,7 +6,7 @@ function Cv() {
   return (
     <>
         <BarraSuperior/>
-        <center> <img src={CV} height='700px' /> </center>
+        <center> <img src={CV} height='700px' alt='Curriculum'/> </center>
     </>
   )
 }
